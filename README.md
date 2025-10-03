@@ -2,6 +2,8 @@
 
 A Chrome extension that makes Kirby randomly walk across the bottom of your screen.
 
+![Kirby walking](kirbyanimation.gif)
+
 ## Installation
 
 1. Download this repository (Code button > Download ZIP)

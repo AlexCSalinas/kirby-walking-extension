@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Screen Wanderer",
+    "version": "1.0",
+    "description": "A little character that wanders around your screen",
+    "permissions": [],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["kirby-sprites.png"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }

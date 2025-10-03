@@ -45,7 +45,7 @@ const speed = 1.5;           // How fast Kirby moves (higher = faster)
 const bottomOffset = 50;     // Distance from bottom of screen
 const minWaitTime = 3000;    // Minimum wait time in milliseconds (3 seconds)
 const maxWaitTime = 10000;   // Maximum wait time in milliseconds (10 seconds)
-const pixelsPerFrame = 14;   // Animation speed (lower = faster walking animation)
+const pixelsPerFrame = 14;   // Animation speed (lower = faster walking animation)```
 After making changes, go to chrome://extensions/ and click the refresh icon on the extension, then reload any webpage to see your changes.
 File
 

@@ -6,7 +6,7 @@ const frameHeight = 60;
 const totalFrames = 10;       
 const rowOffset = -60;
 const problemFrame = 8;
-const frameAdjustment = 3;
+const frameAdjustment = 5;
 
 character.style.position = 'fixed';
 character.style.width = frameWidth + 'px';
@@ -24,14 +24,14 @@ document.body.appendChild(character);
 // Animation variables
 let x = -frameWidth; // Start off-screen
 const speed = 1.5;
-const bottomOffset = 50;
+const bottomOffset = 0;
 const pixelsPerFrame = 15;
 
 // Random appearance settings
 let isWalking = false;
 let waitTime = 0;
-const minWaitTime = 7000; // Minimum wait time in milliseconds (3 seconds)
-const maxWaitTime = 20000; // Maximum wait time in milliseconds (10 seconds)
+const minWaitTime = 10000; // Minimum wait time in milliseconds (10 seconds)
+const maxWaitTime = 500000; // Maximum wait time in milliseconds (500 seconds)
 
 function getRandomWaitTime() {
   return Math.random() * (maxWaitTime - minWaitTime) + minWaitTime;
@@ -78,11 +78,12 @@ function animate() {
   let frameX = -(currentFrame * frameWidth);
   
   // Adjust the problematic frame
-  if (currentFrame === problemFrame) {
+  if (currentFrame === 8 || currentFrame === 9) {
     frameX += frameAdjustment;
+    character.style.left = (x + frameAdjustment) + 'px'; 
+  } else{
+    character.style.left = x + 'px';
   }
-  
-  character.style.left = x + 'px';
   character.style.top = y + 'px';
   character.style.backgroundPosition = `${frameX}px ${rowOffset}px`;
   

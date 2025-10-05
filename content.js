@@ -24,7 +24,7 @@ document.body.appendChild(character);
 // Animation variables
 let x = -frameWidth; // Start off-screen
 const speed = 1.5;
-const bottomOffset = 10;
+const bottomOffset = 0;
 const pixelsPerFrame = 15;
 
 // Random appearance settings
